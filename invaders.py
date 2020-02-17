@@ -29,7 +29,11 @@ class invaders():
     def __init__(self):
         self.x = random.randint(250, 500)
         self.y = random.randint(250,500)
-        self.vx = random.
+        self.vx = random.randint(-4, 4)
+        self.vy = random.randint(-4, 4)
+        self.grafika = pygame.image.load(os.path.join(""))
+    def drawing(self):
+        
 
     def coll(self, player):
     
