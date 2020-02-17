@@ -17,13 +17,25 @@ def wri(text, x, y, size):
     y = (hi - rend.get_rect().height) /2
     screen.blit(rend, (x, y))
 
-wri("Press space to start", 80, 150,40)
+wri("Press space to start", 80, 150, 40)
 
-pygame.display.update()
+
+oponents = []
+
+
 
 
 class invaders():
-    def __init__():
+    def __init__(self):
+        self.x = random.randint(250, 500)
+        self.y = random.randint(250,500)
+        self.vx = random.
+
+    def coll(self, player):
+    
+
+for i in range(20):
+    oponents.append(invaders())
 
 dy = 0
 
@@ -42,3 +54,7 @@ while True:
             if event.key == pygame.K_RIGHT:
                 dy = 1
             
+
+
+
+pygame.display.update()
