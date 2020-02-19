@@ -20,10 +20,6 @@ def wri(text, x, y, size):
 wri("Press space to start", 80, 150, 40)
 
 
-oponents = []
-
-
-
 
 class invaders():
     def __init__(self):
@@ -32,11 +28,18 @@ class invaders():
         self.vx = random.randint(-4, 4)
         self.vy = random.randint(-4, 4)
         self.grafika = pygame.image.load(os.path.join(""))
+        self.wiel =  20
     def drawing(self):
+        screen.blit(self.grafika(self.x, self.y))
+    def  mov(self):
+        self.x = self.x + self.vx
+        self.y = self.y + self.vy
+        if self.x <= 0 or self.x >= wid - self.wiel:
+            
         
 
-    def coll(self, player):
     
+oponents = []
 
 for i in range(20):
     oponents.append(invaders())
