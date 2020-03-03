@@ -35,6 +35,13 @@ class invaders():
         self.x = self.x + self.vx
         self.y = self.y + self.vy
         if self.x <= 0 or self.x >= wid - self.wiel:
+            self.vx = self.vx * -1
+        if self.y <= 0 or self.y >= hi - self.wiel:
+            self.vy = self.vy * -1
+    def coll(self, player):
+        x_center = self.x + self.wiel/2
+        y_center = self.y + self.wiel/2
+        
             
         
 
