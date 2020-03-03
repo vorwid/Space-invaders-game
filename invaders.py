@@ -41,7 +41,12 @@ class invaders():
     def coll(self, player):
         x_center = self.x + self.wiel/2
         y_center = self.y + self.wiel/2
-        
+        if player.collidepoint(x_center, y_center):
+            czcionka = pygame.font.SysFont("Georgia", 20)
+            napis = czcionka. render("KONIEC GRY", 1, (123, 213, 231))
+            screen.blit(napis, (100, 130))
+            global gramy
+            gramy = False
             
         
 
