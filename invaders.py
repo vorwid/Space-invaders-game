@@ -53,16 +53,24 @@ class invaders():
     
 oponents = []
 
-for i in range(20):
+for i in range(10):
     oponents.append(invaders())
 
 dy = 0
+
+gramy = True
 
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             quit()
+        if gramy == True:
+            screen.fill((50, 50, 100,))
+            for o in oponents:
+                o.drawing()
+                o.mov()
+            pygame.display.update()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 dy= -1
