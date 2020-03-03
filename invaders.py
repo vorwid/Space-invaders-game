@@ -48,7 +48,10 @@ class invaders():
             global gramy
             gramy = False
             
-        
+x_player = 300
+y_player = 300
+v = 20
+
 
     
 oponents = []
@@ -71,6 +74,7 @@ while True:
                 o.drawing()
                 o.mov()
             pygame.display.update()
+            pygame.time.wait(10)
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 dy= -1
